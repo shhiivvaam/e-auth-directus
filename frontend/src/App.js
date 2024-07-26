@@ -4,9 +4,9 @@ import Login from './components/Auth/Login';
 import Logout from './components/Auth/Logout';
 import ForgotPassword from './components/Auth/ForgotPassword';
 import OTPVerification from './components/Auth/OTPVerification';
-import OrderedProducts from './components/Products/OrderedProducts';
-import Header from './components/Layout/Header';
-import Footer from './components/Layout/Footer';
+import OrderedProducts from './Products/OrderedProducts';
+import Header from './Layout/Header';
+import Footer from './Layout/Footer';
 
 function App() {
   return (
