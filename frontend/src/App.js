@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Login from './components/Auth/Login';
+import Logout from './components/Auth/Logout';
+import ForgotPassword from './components/Auth/ForgotPassword';
+import OTPVerification from './components/Auth/OTPVerification';
+import OrderedProducts from './components/Products/OrderedProducts';
+import Header from './components/Layout/Header';
+import Footer from './components/Layout/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Routes>
+        <Route path="/login" component={Login} />
+        <Route path="/logout" component={Logout} />
+        <Route path="/forgot-password" component={ForgotPassword} />
+        <Route path="/otp-verification" component={OTPVerification} />
+        <Route path="/ordered-products" component={OrderedProducts} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
